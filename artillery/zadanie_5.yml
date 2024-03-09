@@ -1,0 +1,47 @@
+config:
+  target: "https://postman-echo.com"
+  phases:
+    - duration: 60
+      arrivalRate: 4
+      name: Spike-pre test
+    - duration: 10
+      arrivalRate: 30
+      name: Spike test
+    - duration: 60
+      arrivalRate: 4
+      name: Spike-post test
+  payload:
+    -
+      path: "data.csv"
+      fields:
+        - "name"
+        - "password"
+      order: sequence
+  plugins:
+    ensure: {}
+  ensure:
+    thresholds:
+      - http.response_time.p95: 1000
+    conditions:
+      - expression: vusers.failed == 0
+      - expression: "http.request_rate >= 2"
+      - expression: "http.response_time.max < 500" 
+      - expression: http.codes.200 > 0
+
+scenarios:
+  - name: Getting a resource
+    flow:
+      - get:
+          url: "{{ target }}/get?param1={{ **name** }}"
+      - post:
+          url: "{{ target }}/post?param2={{ **password** }}"
+          json:
+            name: "{{ name }}"
+            password: "{{ password }}"
+          capture:
+            - json: "$.json"
+              as: "request_body"
+            - json: "$.headers.host"
+              as: "host"
+      - log: "Json value from response is: {{ request_body }}"
+      - log: "Host value from response is: {{ host }}"
