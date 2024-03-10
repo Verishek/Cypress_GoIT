@@ -1,6 +1,6 @@
 Raport
 
-![raport](https://photos.google.com/photo/AF1QipNn051zcZ1NTqmJ8dNpLv8nBMiPOUHTC55QweeW)
+![raport](https://github.com/Verishek/Cypress_GoIT/blob/main/artillery/summary_raport.jpg)
 __[raport](https://drive.google.com/file/d/1B7nzTT6mNkAb7WB0FIr1GFXBrEb9uw-N/view?usp=sharing)__
 
 
