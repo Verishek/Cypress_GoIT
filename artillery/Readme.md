@@ -1,3 +1,5 @@
+__[pica](https://drive.google.com/file/d/1B7nzTT6mNkAb7WB0FIr1GFXBrEb9uw-N/view?usp=sharing)__
+
 link do raportu:
 https://drive.google.com/file/d/1B7nzTT6mNkAb7WB0FIr1GFXBrEb9uw-N/view?usp=sharing
 
