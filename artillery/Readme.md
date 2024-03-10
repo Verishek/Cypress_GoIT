@@ -1,5 +1,7 @@
 Raport
 
+![raport](https://github.com/Verishek/Cypress_GoIT/blob/main/artillery/summary_raport.jpg)
+
 __[raport](https://github.com/Verishek/Cypress_GoIT/blob/main/artillery/summary_raport.jpg)__
 
 
